@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Apsen;
 
 public class Cliente
 {
+    [Key]
     public string CNPJ { get; set; }
 
     public string Nome { get; set; }
