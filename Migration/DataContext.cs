@@ -88,7 +88,7 @@ public partial class DataContext : DbContext
                 .HasMaxLength(14)
                 .IsUnicode(false)
                 .HasColumnName("CPNJ_CLIENTE");
-            entity.Property(e => e.Endereco1)
+            entity.Property(e => e.Logradouro)
                 .HasMaxLength(120)
                 .IsUnicode(false)
                 .HasColumnName("ENDERECO");
