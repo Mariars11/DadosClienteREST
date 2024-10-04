@@ -1,16 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Apsen;
+namespace Apsen.Teste;
 
-public partial class DataContext : DbContext
+public partial class DemoDbContext : DbContext
 {
-    public DataContext()
+    public DemoDbContext()
     {
     }
 
-    public DataContext(DbContextOptions<DataContext> options)
+    public DemoDbContext(DbContextOptions<DemoDbContext> options)
         : base(options)
     {
     }
@@ -22,19 +22,23 @@ public partial class DataContext : DbContext
     public virtual DbSet<Endereco> Enderecos { get; set; }
 
     public virtual DbSet<Telefone> Telefones { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=MARIA;Initial Catalog=Apsen;Integrated Security=SSPI; TrustServerCertificate=True; Persist Security Info=False");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cliente>(entity =>
         {
-            entity.HasKey(e => e.CNPJ);
+            entity.HasKey(e => e.Cnpj);
 
             entity.ToTable("CLIENTE");
 
-            entity.Property(e => e.CNPJ)
+            entity.Property(e => e.Cnpj)
                 .HasMaxLength(14)
                 .IsUnicode(false)
                 .HasColumnName("CNPJ");
-
             entity.Property(e => e.FlagStatusAtivo).HasColumnName("FLAG_STATUS_ATIVO");
             entity.Property(e => e.Nome)
                 .HasMaxLength(50)
@@ -50,8 +54,7 @@ public partial class DataContext : DbContext
         {
             entity.ToTable("EMAIL");
 
-            entity.Property(e => e.Id).HasColumnName("ID").ValueGeneratedOnAdd();
-
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.CnpjCliente)
                 .HasMaxLength(14)
                 .IsUnicode(false)
@@ -71,7 +74,7 @@ public partial class DataContext : DbContext
         {
             entity.ToTable("ENDERECO");
 
-            entity.Property(e => e.Id).HasColumnName("ID").ValueGeneratedOnAdd();
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Bairro)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -107,7 +110,7 @@ public partial class DataContext : DbContext
         {
             entity.ToTable("TELEFONE");
 
-            entity.Property(e => e.Id).HasColumnName("ID").ValueGeneratedOnAdd();
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.CnpjCliente)
                 .HasMaxLength(14)
                 .IsUnicode(false)

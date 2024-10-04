@@ -1,11 +1,11 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Apsen;
+namespace Apsen.Teste;
 
 public partial class Cliente
 {
-    public string CNPJ { get; set; } = null!;
+    public string Cnpj { get; set; } = null!;
 
     public string Nome { get; set; } = null!;
 

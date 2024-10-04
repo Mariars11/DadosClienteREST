@@ -19,11 +19,11 @@ public class ClienteController : ControllerBase
     
     [HttpGet(Name = "GetClientes")]
     public IEnumerable<Cliente> GetClientes(){
-        return _context.Clientes;
+        return _context.Clientes.Include(n => n.Telefones).Include(n => n.Enderecos).Include(n => n.Emails);
     }
     [HttpGet("{cpnj}")]
     public Cliente GetCliente(string cpnj){
-        return _context.Clientes.First(n => n.CNPJ == cpnj);
+        return _context.Clientes.Include(n => n.Telefones).Include(n => n.Enderecos).Include(n => n.Emails).First(n => n.CNPJ == cpnj);
     }
     [HttpPost(Name = "PostClient")]
     public void CreateCliente(Cliente cliente){
