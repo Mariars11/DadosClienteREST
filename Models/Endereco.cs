@@ -13,14 +13,19 @@ public partial class Endereco
     public string Cep { get; set; } = null!;
     [Required(ErrorMessage = "Informe o endereço")]
     public string Logradouro { get; set; } = null!;
-    [Required(ErrorMessage = "Informe o complemento")]
-    public string Complemento { get; set; } = null!;
+    public string? Complemento { get; set; }
+    [Required(ErrorMessage = "Informe o bairro")]
+    [MaxLength(6, ErrorMessage = "Número de endereço muito grande")]
+    [RegularExpression(@"\d+", ErrorMessage = "Valor não é um número")]
+    public string Numero { get; set; } = null!;
+    
     [Required(ErrorMessage = "Informe o bairro")]
     public string Bairro { get; set; } = null!;
-    [Required(ErrorMessage = "Informe o bairro")]
-    [RegularExpression(@"\d+", ErrorMessage = "Valor não é um número")]
-
-    public string Numero { get; set; } = null!;
+    [Required(ErrorMessage = "Informe a cidade")]
+    public string Cidade { get; set; } = null!;
+    [Required(ErrorMessage = "Informe o estado")]
+    public string Estado { get; set; } = null!;
+    
     [Required(ErrorMessage = "Informe o CNPJ do cliente")]
     public string CpnjCliente { get; set; } = null!;
 

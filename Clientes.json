@@ -100,25 +100,25 @@
     },  
     {
         "cnpj": "98945612345678",
-        "nome": "Joana",
-        "sobrenome": "Katarina",
+        "nome": "Carlos Eduardo",
+        "sobrenome": "Gustavo Ruan Rocha",
         "flagStatusAtivo": true,
         "emails": [
             {
                 "id": 0,
-                "enderecoEmail": "joana@gmail.com",
+                "enderecoEmail": "carloseduardorocha@ideiaviva.com.br",
                 "cnpjCliente": "98945612345678"
             }
         ],
         "enderecos": [
             {
                 "id": 0,
-                "cep": "72809800",
-                "logradouro": "Piaui",
+                "cep": "58073448",
+                "logradouro": "Rua Maria das Neves Amorim",
                 "cpnjCliente": "98945612345678",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
+                "complemento": "João Pessoa",
+                "bairro": "José Américo de Almeida",
+                "numero": "276"
             }
         ],
         "telefones": [
@@ -132,32 +132,32 @@
     },   
     {
         "cnpj": "48945612345678",
-        "nome": "Paola",
-        "sobrenome": "Koala",
+        "nome": "Letícia",
+        "sobrenome": "Luiza dos Santos",
         "flagStatusAtivo": true,
         "emails": [
             {
                 "id": 0,
-                "enderecoEmail": "Paola@gmail.com",
+                "enderecoEmail": "leticia.luiza.dossantos@sinalmanaus.com.br",
                 "cnpjCliente": "48945612345678"
             }
         ],
         "enderecos": [
             {
                 "id": 0,
-                "cep": "72809800",
-                "logradouro": "Piaui",
+                "cep": "69314222",
+                "logradouro": "Rua Centauro",
                 "cpnjCliente": "48945612345678",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
+                "complemento": "Boa Vista",
+                "bairro": "Jardim Primavera",
+                "numero": "792"
             }
         ],
         "telefones": [
             {
                 "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
+                "ddd": "95",
+                "numero": "39380435",
                 "cnpjCliente": "48945612345678"
             }
         ]
@@ -289,5 +289,297 @@
                 "cnpjCliente": "78945612398778"
             }
         ]
-    }   
+    },
+        {
+            "cnpj": "21345678914759",
+            "nome": "Maria Clara",
+            "sobrenome": "Silva",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "maria@gmail.com",
+                    "cnpjCliente": "21345678914759"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "paulista",
+                    "cpnjCliente": "21345678914759",
+                    "complemento": "sao paulo",
+                    "bairro": "paulista",
+                    "numero": "13"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "21345678914759"
+                }
+            ]
+        },
+    
+        {
+            "cnpj": "45678912345678",
+            "nome": "Fernando",
+            "sobrenome": "Pereira",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "Fernando@gmail.com",
+                    "cnpjCliente": "45678912345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Minas Gerais",
+                    "cpnjCliente": "45678912345678",
+                    "complemento": "MG",
+                    "bairro": "BH",
+                    "numero": "15"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "65",
+                    "numero": "940028922",
+                    "cnpjCliente": "45678912345678"
+                }
+            ]
+        },
+    
+    
+        {
+            "cnpj": "78945612345678",
+            "nome": "Joana",
+            "sobrenome": "Katarina",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "joana@gmail.com",
+                    "cnpjCliente": "78945612345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Piaui",
+                    "cpnjCliente": "78945612345678",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "78945612345678"
+                }
+            ]
+        },  
+        {
+            "cnpj": "98945612345678",
+            "nome": "Joana",
+            "sobrenome": "Katarina",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "joana@gmail.com",
+                    "cnpjCliente": "98945612345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Piaui",
+                    "cpnjCliente": "98945612345678",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "98945612345678"
+                }
+            ]
+        },   
+        {
+            "cnpj": "48945612345678",
+            "nome": "Paola",
+            "sobrenome": "Koala",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "Paola@gmail.com",
+                    "cnpjCliente": "48945612345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Piaui",
+                    "cpnjCliente": "48945612345678",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "48945612345678"
+                }
+            ]
+        },   
+        {
+            "cnpj": "58945612345678",
+            "nome": "Noah",
+            "sobrenome": "Soares de Abreul",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "Noah@gmail.com",
+                    "cnpjCliente": "58945612345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Piaui",
+                    "cpnjCliente": "58945612345678",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "58945612345678"
+                }
+            ]
+        },   
+        {
+            "cnpj": "68945612345678",
+            "nome": "Luisa",
+            "sobrenome": "Katarina",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "Luisa@gmail.com",
+                    "cnpjCliente": "68945612345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Piaui",
+                    "cpnjCliente": "68945612345678",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "68945612345678"
+                }
+            ]
+        },   
+        {
+            "cnpj": "75445612345678",
+            "nome": "Joana",
+            "sobrenome": "Katarina",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "joana@gmail.com",
+                    "cnpjCliente": "75445612345678"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Piaui",
+                    "cpnjCliente": "75445612345678",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "75445612345678"
+                }
+            ]
+        },   
+        {
+            "cnpj": "78945612398778",
+            "nome": "Paula",
+            "sobrenome": "Katarina",
+            "flagStatusAtivo": true,
+            "emails": [
+                {
+                    "id": 0,
+                    "enderecoEmail": "Paula@gmail.com",
+                    "cnpjCliente": "78945612398778"
+                }
+            ],
+            "enderecos": [
+                {
+                    "id": 0,
+                    "cep": "72809800",
+                    "logradouro": "Rio Grande do Norte",
+                    "cpnjCliente": "78945612398778",
+                    "complemento": "Juazeiro",
+                    "bairro": "Norte",
+                    "numero": "10"
+                }
+            ],
+            "telefones": [
+                {
+                    "id": 0,
+                    "ddd": "61",
+                    "numero": "940028922",
+                    "cnpjCliente": "78945612398778"
+                }
+            ]
+        }   
+       
 ]

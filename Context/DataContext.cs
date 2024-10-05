@@ -84,6 +84,14 @@ public partial class DataContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("COMPLEMENTO");
+            entity.Property(e => e.Cidade)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("CIDADE");
+            entity.Property(e => e.Estado)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("ESTADO");
             entity.Property(e => e.CpnjCliente)
                 .HasMaxLength(14)
                 .IsUnicode(false)
@@ -116,7 +124,11 @@ public partial class DataContext : DbContext
                 .HasMaxLength(2)
                 .IsUnicode(false)
                 .HasColumnName("DDD");
-            entity.Property(e => e.Numero)
+            entity.Property(e => e.TelefoneFixo)
+                .HasMaxLength(9)
+                .IsUnicode(false)
+                .HasColumnName("TELEFONE_FIXO");
+            entity.Property(e => e.Celular)
                 .HasMaxLength(9)
                 .IsUnicode(false)
                 .HasColumnName("NUMERO");
