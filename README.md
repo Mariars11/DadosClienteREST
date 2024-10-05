@@ -6,6 +6,8 @@
 > dotnet restore <br>
 > dotnet build <br>
 > dotnet watch run <br>
+> dotnet test <br>
+> dotnet clean (exclue bin e obj para rodar o teste)
 
 # Utilização da API
 
