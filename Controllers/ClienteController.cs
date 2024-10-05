@@ -1,3 +1,4 @@
+using Apsen.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,14 +8,11 @@ namespace Apsen.Controllers;
 [Route("[controller]")]
 public class ClienteController : ControllerBase
 {
-    private readonly ILogger<ClienteController> _logger;
-
-    public ClienteController(ILogger<ClienteController> logger, DataContext context)
+    private readonly IClientService _clienteService;
+    public ClienteController(IClientService clienteService)
     {
-        _logger = logger;
-        _context = context;
+        _clienteService = clienteService;
     }
-    private DataContext _context;
     /// <summary>
         /// Listar clientes de forma paginada
     /// </summary>
@@ -24,11 +22,7 @@ public class ClienteController : ControllerBase
     [HttpGet("PageSize={PageSize}&CurrentPage={CurrentPage}")]
     public IEnumerable<Cliente> GetClientes(int PageSize, int CurrentPage){
         Console.WriteLine(String.Format("Tamanho da pagina: {0}; Pagina atual: {1}", PageSize, CurrentPage));
-        return _context.Clientes
-                        .Include(n => n.Telefones)
-                        .Include(n => n.Enderecos)
-                        .Include(n => n.Emails)
-                        .Skip((CurrentPage - 1) * PageSize).Take(PageSize);
+        return _clienteService.GetClientes(PageSize, CurrentPage);
     }
 
     /// <summary>
@@ -41,12 +35,7 @@ public class ClienteController : ControllerBase
 
     [HttpGet("$PageSize={PageSize}&CurrentPage={CurrentPage}&IsAtivo={IsAtivo}")]
     public IEnumerable<Cliente> GetClientesAtividade(int PageSize, int CurrentPage, bool IsAtivo){
-        return _context.Clientes
-                        .Include(n => n.Telefones)
-                        .Include(n => n.Enderecos)
-                        .Include(n => n.Emails)
-                        .Skip((CurrentPage - 1) * PageSize).Take(PageSize)
-                        .Where(n => n.FlagStatusAtivo == IsAtivo);
+        return _clienteService.GetClientesAtividade(PageSize, CurrentPage, IsAtivo);
     }
 
     /// <summary>
@@ -56,11 +45,7 @@ public class ClienteController : ControllerBase
     ///<param name="cpnj" example="12345678912345"></param>
     [HttpGet("{cpnj}")]
     public async Task<ActionResult<Cliente>> GetCliente(string cpnj){
-            var cliente = _context.Clientes
-                            .Include(n => n.Telefones)
-                            .Include(n => n.Enderecos)
-                            .Include(n => n.Emails)
-                            .FirstOrDefault(n => n.CNPJ == cpnj);
+            var cliente = _clienteService.GetCliente(cpnj);
             if(cliente == null){
                 return NotFound();
             }
@@ -118,19 +103,15 @@ public class ClienteController : ControllerBase
 /// <response code="400">Inconformidade com algum campo</response>
     [HttpPost(Name = "PostClient")]
     public async Task<IActionResult> CreateCliente(List<Cliente> clientes){
-        foreach (var cliente in clientes)
-        {
-            var findClient = _context.Clientes.Where(n => n.CNPJ == cliente.CNPJ);
-            if(!findClient.Any()){
-                _context.Clientes.Add(cliente);
-                _context.SaveChanges();
-            }
-            else{
-                return BadRequest(String.Format("O CNPJ {0} já existe na base de dados", cliente.CNPJ));
-            }
+        var response = _clienteService.CreateCliente(clientes);
+
+        if(response.Contains("Bad request 400")){
+            return BadRequest(response);
         }
-        return Ok("Cliente(s) criados!");
-        
+        else if(response.Contains("OK 200")){
+             return Ok("Cliente(s) criados!");
+        }   
+        return Ok(response);    
     }
 /// <summary>
 /// Atualiza um ou varios campos de um cliente
@@ -185,18 +166,16 @@ public class ClienteController : ControllerBase
     //Atualizar um cliente
     [HttpPut("{ID}")]
     public async Task<IActionResult> UpdateCliente(int ID, Cliente cliente){
-        _context.Entry(cliente).State = EntityState.Modified;
-        try
-        {
-            _context.SaveChanges();
+        var response = _clienteService.UpdateCliente(ID, cliente);
 
+        if(response.Contains("Bad Request 400")){
+            return BadRequest(response);
+        }
+        else if(response.Contains("OK 200")){
             return Ok(String.Format("Cliente com CPNJ: {0} e ID: {1} atualizado com sucesso!", cliente.CNPJ, ID));
-
         }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        return Ok(response);
+        
     }
     /// <summary>
     /// Deleta um cliente 
@@ -204,19 +183,18 @@ public class ClienteController : ControllerBase
     ///<param name="cnpj" example="12345678912345"></param>
     [HttpDelete("{cnpj}")]
     public async Task<IActionResult> DeleteCliente(string cnpj){
-        Cliente clienteDeletar = _context.Clientes.Find(cnpj);
-        try
-        {
-            _context.Clientes.Remove(clienteDeletar);
-            _context.SaveChanges();
-
-            return Ok("Clientes excluídos com sucesso!");
-
+        string response = _clienteService.DeleteCliente(cnpj);
+        
+        if(response.Contains("Not found 404")){
+            return NotFound(String.Format("CNPJ {0} não existe!", cnpj));
         }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
+        else if(response.Contains("OK 200")){
+            return Ok("Cliente excluído com sucesso!");        
         }
+        else if(response.Contains("Bad Request 400")){
+            return BadRequest(response);
+        }
+        return Ok(response);
     }
     /// <summary>
     /// Deleta todos os clientes registrados
@@ -225,19 +203,14 @@ public class ClienteController : ControllerBase
     /// <response code="400">Erro ao excluir clientes</response>
      [HttpDelete("")]
     public async Task<IActionResult> DeleteAllClientes(){
-        List<Cliente> clienteDeletar = _context.Clientes.ToList();
-
-        try
-        {
-            _context.Clientes.RemoveRange(clienteDeletar);
-            _context.SaveChanges();
-
-            return Ok("Clientes excluídos com sucesso!");
-
+        string response = _clienteService.DeleteAllClientes();
+        
+        if(response.Contains("OK 200")){
+            return Ok("Clientes excluídos com sucesso!");        
         }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
+        else if(response.Contains("Bad Request 400")){
+            return BadRequest(response);
         }
+        return Ok(response);
     }
 }

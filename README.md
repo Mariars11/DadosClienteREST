@@ -80,6 +80,7 @@
 # Arquitetura MVC
 ## Models
 - Cliente
+    - ID
     - CNPJ (string, 14 digitos)
     - Nome cliente (string)
     - Sobrenome cliente (string)
@@ -88,13 +89,14 @@
 - Email
     - ID (key)
     - Endereço (Mascara email: maria@gmail.com)
-    - CNPJ_Cliente (relacionamento com cliente)
+    - ID_Cliente (relacionamento com cliente)
 
 - Telefone
     - ID (key)
     - DDD (Mascara email: xx (dois digitos))
-    - Numero (9xxxxxxxx)
-    - CNPJ_Cliente (relacionamento com cliente)
+    - Celular (9xxxxxxxx)
+    - Telefone_Fixo (xxxxxxxx)
+    - ID_Cliente (relacionamento com cliente)
 
 - Endereco
     - ID (key)
@@ -102,8 +104,10 @@
     - Logradouro 
     - Complemento
     - Bairro
+    - Cidade
+    - Estado
     - Numero
-    - CNPJ_Cliente (relacionamento com cliente)
+    - ID_Cliente (relacionamento com cliente)
 
 
 
