@@ -18,7 +18,7 @@
 
     <PackageReference Include="Moq" Version="4.20.72" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit" Version="2.5.3" />
   </ItemGroup>
 <PropertyGroup>
   <GenerateDocumentationFile>true</GenerateDocumentationFile>

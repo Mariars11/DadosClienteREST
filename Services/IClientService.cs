@@ -1,5 +1,5 @@
 
-using Microsoft.AspNetCore.Mvc;
+using Apsen.Models;
 
 namespace Apsen.Services;
 public interface IClientService

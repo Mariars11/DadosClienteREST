@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Apsen;
+namespace Apsen.Models;
 
 public partial class Endereco
 {

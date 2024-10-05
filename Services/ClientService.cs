@@ -1,6 +1,7 @@
-using Apsen;
+using Apsen.Models;
 using Apsen.Services;
 using Microsoft.EntityFrameworkCore;
+
 namespace Apsen.Services;
 public class ClientService : IClientService
 {

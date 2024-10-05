@@ -1,4 +1,5 @@
 using Apsen.Services;
+using Apsen.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
