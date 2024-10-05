@@ -20,17 +20,16 @@ public partial class Telefone
 
     [RegularExpression(@"9\d\d\d\d\d\d\d+", ErrorMessage = "Celular inválido")]
     public string Celular { get; set; } = null!;
-     [Required(ErrorMessage = "Informe o número de telefone")]
     [DataType(DataType.PhoneNumber)]
     [MaxLength(8, ErrorMessage = "Telefone com quantidade de dígitos errado (8)")]
     [MinLength(8, ErrorMessage = "Telefone com quantidade de dígitos errado (9)")]
     [RegularExpression(@"\d\d\d\d\d\d\d\d+", ErrorMessage = "Telefone inválido")]
-    public string TelefoneFixo { get; set; } = null!;
+    public string? TelefoneFixo { get; set; } 
     
     [Required(ErrorMessage = "Informe o CNPJ do cliente")]
 
 
-    public string CnpjCliente { get; set; } = null!;
+    public int IdCliente { get; set; }
 
     public virtual Cliente? CnpjClienteNavigation { get; set; } 
 }

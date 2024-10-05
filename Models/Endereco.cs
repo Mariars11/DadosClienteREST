@@ -26,8 +26,6 @@ public partial class Endereco
     [Required(ErrorMessage = "Informe o estado")]
     public string Estado { get; set; } = null!;
     
-    [Required(ErrorMessage = "Informe o CNPJ do cliente")]
-    public string CpnjCliente { get; set; } = null!;
-
+    public int IdCliente { get; set; } 
     public virtual Cliente? CpnjClienteNavigation { get; set; }
 }

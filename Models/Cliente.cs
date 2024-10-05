@@ -6,10 +6,10 @@ namespace Apsen;
 
 public partial class Cliente
 {
+    public int ID { get; set; }
     [Required(ErrorMessage = "Informe o valor do CNPJ!")]
     [MinLength(14, ErrorMessage = "Quantidade de dígitos inválida! (14)")]
     [MaxLength(14, ErrorMessage = "Quantidade de dígitos inválida! (14)")]
-
     public string CNPJ { get; set; } = null!;
     [Required(ErrorMessage = "Informe o nome!")]
     [MinLength(2, ErrorMessage = "Nome inválido")]

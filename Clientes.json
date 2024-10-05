@@ -1,585 +1,1030 @@
 [
     {
-        "cnpj": "21345678914759",
-        "nome": "Maria Clara",
+      "cnpj": "12345678912345",
+      "nome": "Maria Clara",
+      "sobrenome": "Silva",
+      "flagStatusAtivo": true,
+      "emails": [
+        {
+          "id": 0,
+          "enderecoEmail": "mariaclara@gmail.com",
+          "idCliente": "0"
+        },
+        {
+            "id": 0,
+            "enderecoEmail": "mariaclarar11@gmail.com",
+            "idCliente": "0"
+        }
+      ],
+      "enderecos": [
+        {
+          "id": 0,
+          "cep": "94470410",
+          "logradouro": "Travessa Inácio de Fraga",
+          "complemento": "",
+          "numero": "810",
+          "bairro": "Viamópolis",
+          "cidade": "Viamão",
+          "estado": "RS",
+          "idCliente": "0"
+        }
+      ],
+      "telefones": [
+        {
+          "id": 0,
+          "ddd": "51",
+          "celular": "983962396",
+          "telefoneFixo": "29348255",
+          "idCliente": "0"
+        }
+      ]
+    },
+    {
+        "cnpj": "31949769747789",
+        "nome": "Vanessa",
+        "sobrenome": "Clara Francisca Drumond",
+        "flagStatusAtivo": false,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "vanessa_drumond@zian.com.br",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Rua Principal",
+            "complemento": "",
+            "numero": "221",
+            "bairro": "Centro",
+            "cidade": "Santa Elvira",
+            "estado": "MT",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "66",
+            "celular": "987793928",
+            "telefoneFixo": "37421138",
+            "idCliente": "0"
+          }
+        ]
+      },
+      {
+        "cnpj": "40337588104456",
+        "nome": "Regina",
+        "sobrenome": "Sueli Olivia Dias",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "regina_sueli_dias@vol.com.br",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "71710033",
+            "logradouro": "Avenida Central Bloco",
+            "complemento": "",
+            "numero": "683",
+            "bairro": "Núcleo Bandeirante",
+            "cidade": "Brasília",
+            "estado": "DF",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "61",
+            "celular": "999659592",
+            "telefoneFixo": "36948523",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "26543256794781",
+        "nome": "Raimunda",
+        "sobrenome": "Letícia",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "raimundaleticiamelo@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "36037844",
+            "logradouro": "Rua Vereador Waldir Sousa Silva",
+            "complemento": "",
+            "numero": "658",
+            "bairro": "Caiçaras",
+            "cidade": "Juiz de Fora",
+            "estado": "MG",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "32",
+            "celular": "983000403",
+            "telefoneFixo": "35904690",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "49333988521471",
+        "nome": "Carolina",
+        "sobrenome": "Elaine Maria Aragão",
+        "flagStatusAtivo": false,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "carolina_elaine@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "41600630",
+            "logradouro": "Rua F",
+            "complemento": "",
+            "numero": "894",
+            "bairro": "Stella Maria",
+            "cidade": "Salvador",
+            "estado": "BA",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "993490370",
+            "telefoneFixo": "25755669",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "00321245466730",
+        "nome": "Mirella",
+        "sobrenome": "Figueiredo",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "mirella@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348255",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "49333988521489",
+        "nome": "Cristiane",
         "sobrenome": "Silva",
         "flagStatusAtivo": true,
         "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "maria@gmail.com",
-                "cnpjCliente": "21345678914759"
-            }
+          {
+            "id": 0,
+            "enderecoEmail": "cristiane@gmail.com",
+            "idCliente": "0"
+          }
         ],
         "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "paulista",
-                "cpnjCliente": "21345678914759",
-                "complemento": "sao paulo",
-                "bairro": "paulista",
-                "numero": "13"
-            }
+          {
+            "id": 0,
+            "cep": "83704272",
+            "logradouro": "Rua Targino Silva",
+            "complemento": "",
+            "numero": "140",
+            "bairro": "Boqueirão",
+            "cidade": "Araucária",
+            "estado": "PR",
+            "idCliente": "0"
+          }
         ],
         "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "21345678914759"
-            }
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "982493159",
+            "telefoneFixo": "25035268",
+            "idCliente": "0"
+          }
         ]
-    },
-
-    {
-        "cnpj": "45678912345678",
-        "nome": "Fernando",
+      },{
+        "cnpj": "49333981821489",
+        "nome": "Ester",
+        "sobrenome": "Mota",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "ester@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "45650268",
+            "logradouro": "Rua Dom Benedito Zorzi",
+            "complemento": "",
+            "numero": "349",
+            "bairro": "Conquista",
+            "cidade": "Ilheus",
+            "estado": "BA",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "981750319",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "49333981821443",
+        "nome": "Paula",
+        "sobrenome": "Andrade Rebeca",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "paulaandrade@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Inácio da Silva",
+            "complemento": "",
+            "numero": "130",
+            "bairro": "Centro",
+            "cidade": "Koala",
+            "estado": "SP",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "21",
+            "celular": "983964396",
+            "telefoneFixo": "49348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "59333981821443",
+        "nome": "Paulo",
+        "sobrenome": "Fernandes",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "paulo_fernandes@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Avenida Manoel Pereira Cavalcante",
+            "complemento": "N/A",
+            "numero": "702",
+            "bairro": "Santa Lúcia",
+            "cidade": "Maceió",
+            "estado": "AL",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "82",
+            "celular": "984763295",
+            "telefoneFixo": "26422448",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "59253981821443",
+        "nome": "Helena",
+        "sobrenome": "Heloise",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "helena@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470420",
+            "logradouro": "Travessa",
+            "complemento": "Rua 10",
+            "numero": "3",
+            "bairro": "Viamó",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "59253981847443",
+        "nome": "Maria Fernanda",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "mariafernanda@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "59258481847443",
+        "nome": "Rosângela Sophia",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "rosangela_sophia@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Rua Dom Benedito Zorzi",
+            "complemento": "",
+            "numero": "120",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "59258481487443",
+        "nome": "Olivia",
+        "sobrenome": "Emanuelly",
+        "flagStatusAtivo": false,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "oliviaemanuellypereir@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "88370134",
+            "logradouro": "Rua Justino Ribeiro Córdova",
+            "complemento": "",
+            "numero": "891",
+            "bairro": "Centro",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "59458481486443",
+        "nome": "Joana",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "joana_silva@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "29458481486445",
+        "nome": "Mauricio",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "mauricio@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "29558481484445",
+        "nome": "Joaquim",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "joaquim@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Taguatinga",
+            "complemento": "",
+            "numero": "145",
+            "bairro": "Tocatins",
+            "cidade": "Tocatins",
+            "estado": "TO",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "41",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "29158481446447",
+        "nome": "Santa Lucia",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "lucia_santa@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "57082037",
+            "logradouro": "Priscila Liz",
+            "complemento": "",
+            "numero": "706",
+            "bairro": "Viamópolis",
+            "cidade": "Maceio",
+            "estado": "AL",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "82",
+            "celular": "984964396",
+            "telefoneFixo": "26348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "29148481445447",
+        "nome": "Mário Breno",
+        "sobrenome": "Carlos Eduardo",
+        "flagStatusAtivo": false,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "mario_eduardo@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "39148481445441",
+        "nome": "Analu",
+        "sobrenome": "Stefany",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "analu@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "83704272",
+            "logradouro": "Rua Targino Silva",
+            "complemento": "Não tem",
+            "numero": "140",
+            "bairro": "Boqueirão",
+            "cidade": "Araucária",
+            "estado": "PR",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "41",
+            "celular": "983964596",
+            "telefoneFixo": "29348276",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "39148481475441",
+        "nome": "Luiz",
+        "sobrenome": "Almeida",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "luiz@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Rua 66",
+            "complemento": "",
+            "numero": "175",
+            "bairro": "Independência - 1º Complemento Setor das Mansões",
+            "cidade": "Aparecida de Goiania",
+            "estado": "GO",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "62",
+            "celular": "994544135",
+            "telefoneFixo": "25124214",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "39148481775541",
+        "nome": "Lais",
+        "sobrenome": "Gabriela",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "lais_gaby@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "23535220",
+            "logradouro": "Rua bom nome",
+            "complemento": "",
+            "numero": "7",
+            "bairro": "Sepetiba",
+            "cidade": "Rio de Janeiro",
+            "estado": "RJ",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "21",
+            "celular": "983762396",
+            "telefoneFixo": "39348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "39178481775541",
+        "nome": "Mirela Luisa",
+        "sobrenome": "Silva",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "mirela_l_sliva@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "79178481775641",
+        "nome": "Marcos",
+        "sobrenome": "Pietro Figueiredo",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "marcos@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "79178491775642",
+        "nome": "Antonia",
+        "sobrenome": "Joana",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "antoniaJ@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "70",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "78178491785642",
+        "nome": "Mariana",
+        "sobrenome": "Figueiredo",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "mariana_fig@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "88178591785643",
+        "nome": "Pietro",
+        "sobrenome": "Peixoto",
+        "flagStatusAtivo": true,
+        "emails": [
+          {
+            "id": 0,
+            "enderecoEmail": "pietro_peixoto@gmail.com",
+            "idCliente": "0"
+          }
+        ],
+        "enderecos": [
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
+        ],
+        "telefones": [
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "49349256",
+            "idCliente": "0"
+          }
+        ]
+      },{
+        "cnpj": "88278591785643",
+        "nome": "Lucas",
         "sobrenome": "Pereira",
         "flagStatusAtivo": true,
         "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "Fernando@gmail.com",
-                "cnpjCliente": "45678912345678"
-            }
+          {
+            "id": 0,
+            "enderecoEmail": "lucas@gmail.com",
+            "idCliente": "0"
+          }
         ],
         "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "Minas Gerais",
-                "cpnjCliente": "45678912345678",
-                "complemento": "MG",
-                "bairro": "BH",
-                "numero": "15"
-            }
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
         ],
         "telefones": [
-            {
-                "id": 0,
-                "ddd": "65",
-                "numero": "940028922",
-                "cnpjCliente": "45678912345678"
-            }
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "49348256",
+            "idCliente": "0"
+          }
         ]
-    },
-
-
-    {
-        "cnpj": "78945612345678",
-        "nome": "Joana",
-        "sobrenome": "Katarina",
+      },{
+        "cnpj": "88179591785642",
+        "nome": "Cristiano Ronaldo",
+        "sobrenome": "JR",
         "flagStatusAtivo": true,
         "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "joana@gmail.com",
-                "cnpjCliente": "78945612345678"
-            }
+          {
+            "id": 0,
+            "enderecoEmail": "crisjr@gmail.com",
+            "idCliente": "0"
+          }
         ],
         "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "Piaui",
-                "cpnjCliente": "78945612345678",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
-            }
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
         ],
         "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "78945612345678"
-            }
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "39348256",
+            "idCliente": "0"
+          }
         ]
-    },  
-    {
-        "cnpj": "98945612345678",
-        "nome": "Carlos Eduardo",
-        "sobrenome": "Gustavo Ruan Rocha",
+      },{
+        "cnpj": "48179691785643",
+        "nome": "Mateus",
+        "sobrenome": "Mota Pereira",
         "flagStatusAtivo": true,
         "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "carloseduardorocha@ideiaviva.com.br",
-                "cnpjCliente": "98945612345678"
-            }
+          {
+            "id": 0,
+            "enderecoEmail": "mateusmotina@gmail.com",
+            "idCliente": "0"
+          }
         ],
         "enderecos": [
-            {
-                "id": 0,
-                "cep": "58073448",
-                "logradouro": "Rua Maria das Neves Amorim",
-                "cpnjCliente": "98945612345678",
-                "complemento": "João Pessoa",
-                "bairro": "José Américo de Almeida",
-                "numero": "276"
-            }
+          {
+            "id": 0,
+            "cep": "94470410",
+            "logradouro": "Travessa Inácio de Fraga",
+            "complemento": "",
+            "numero": "810",
+            "bairro": "Viamópolis",
+            "cidade": "Viamão",
+            "estado": "RS",
+            "idCliente": "0"
+          }
         ],
         "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "98945612345678"
-            }
+          {
+            "id": 0,
+            "ddd": "51",
+            "celular": "983962396",
+            "telefoneFixo": "29348256",
+            "idCliente": "0"
+          }
         ]
-    },   
-    {
-        "cnpj": "48945612345678",
-        "nome": "Letícia",
-        "sobrenome": "Luiza dos Santos",
-        "flagStatusAtivo": true,
-        "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "leticia.luiza.dossantos@sinalmanaus.com.br",
-                "cnpjCliente": "48945612345678"
-            }
-        ],
-        "enderecos": [
-            {
-                "id": 0,
-                "cep": "69314222",
-                "logradouro": "Rua Centauro",
-                "cpnjCliente": "48945612345678",
-                "complemento": "Boa Vista",
-                "bairro": "Jardim Primavera",
-                "numero": "792"
-            }
-        ],
-        "telefones": [
-            {
-                "id": 0,
-                "ddd": "95",
-                "numero": "39380435",
-                "cnpjCliente": "48945612345678"
-            }
-        ]
-    },   
-    {
-        "cnpj": "58945612345678",
-        "nome": "Noah",
-        "sobrenome": "Soares de Abreul",
-        "flagStatusAtivo": true,
-        "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "Noah@gmail.com",
-                "cnpjCliente": "58945612345678"
-            }
-        ],
-        "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "Piaui",
-                "cpnjCliente": "58945612345678",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
-            }
-        ],
-        "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "58945612345678"
-            }
-        ]
-    },   
-    {
-        "cnpj": "68945612345678",
-        "nome": "Luisa",
-        "sobrenome": "Katarina",
-        "flagStatusAtivo": true,
-        "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "Luisa@gmail.com",
-                "cnpjCliente": "68945612345678"
-            }
-        ],
-        "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "Piaui",
-                "cpnjCliente": "68945612345678",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
-            }
-        ],
-        "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "68945612345678"
-            }
-        ]
-    },   
-    {
-        "cnpj": "75445612345678",
-        "nome": "Joana",
-        "sobrenome": "Katarina",
-        "flagStatusAtivo": true,
-        "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "joana@gmail.com",
-                "cnpjCliente": "75445612345678"
-            }
-        ],
-        "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "Piaui",
-                "cpnjCliente": "75445612345678",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
-            }
-        ],
-        "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "75445612345678"
-            }
-        ]
-    },   
-    {
-        "cnpj": "78945612398778",
-        "nome": "Paula",
-        "sobrenome": "Katarina",
-        "flagStatusAtivo": true,
-        "emails": [
-            {
-                "id": 0,
-                "enderecoEmail": "Paula@gmail.com",
-                "cnpjCliente": "78945612398778"
-            }
-        ],
-        "enderecos": [
-            {
-                "id": 0,
-                "cep": "72809800",
-                "logradouro": "Rio Grande do Norte",
-                "cpnjCliente": "78945612398778",
-                "complemento": "Juazeiro",
-                "bairro": "Norte",
-                "numero": "10"
-            }
-        ],
-        "telefones": [
-            {
-                "id": 0,
-                "ddd": "61",
-                "numero": "940028922",
-                "cnpjCliente": "78945612398778"
-            }
-        ]
-    },
-        {
-            "cnpj": "21345678914759",
-            "nome": "Maria Clara",
-            "sobrenome": "Silva",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "maria@gmail.com",
-                    "cnpjCliente": "21345678914759"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "paulista",
-                    "cpnjCliente": "21345678914759",
-                    "complemento": "sao paulo",
-                    "bairro": "paulista",
-                    "numero": "13"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "21345678914759"
-                }
-            ]
-        },
-    
-        {
-            "cnpj": "45678912345678",
-            "nome": "Fernando",
-            "sobrenome": "Pereira",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "Fernando@gmail.com",
-                    "cnpjCliente": "45678912345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Minas Gerais",
-                    "cpnjCliente": "45678912345678",
-                    "complemento": "MG",
-                    "bairro": "BH",
-                    "numero": "15"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "65",
-                    "numero": "940028922",
-                    "cnpjCliente": "45678912345678"
-                }
-            ]
-        },
-    
-    
-        {
-            "cnpj": "78945612345678",
-            "nome": "Joana",
-            "sobrenome": "Katarina",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "joana@gmail.com",
-                    "cnpjCliente": "78945612345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Piaui",
-                    "cpnjCliente": "78945612345678",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "78945612345678"
-                }
-            ]
-        },  
-        {
-            "cnpj": "98945612345678",
-            "nome": "Joana",
-            "sobrenome": "Katarina",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "joana@gmail.com",
-                    "cnpjCliente": "98945612345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Piaui",
-                    "cpnjCliente": "98945612345678",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "98945612345678"
-                }
-            ]
-        },   
-        {
-            "cnpj": "48945612345678",
-            "nome": "Paola",
-            "sobrenome": "Koala",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "Paola@gmail.com",
-                    "cnpjCliente": "48945612345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Piaui",
-                    "cpnjCliente": "48945612345678",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "48945612345678"
-                }
-            ]
-        },   
-        {
-            "cnpj": "58945612345678",
-            "nome": "Noah",
-            "sobrenome": "Soares de Abreul",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "Noah@gmail.com",
-                    "cnpjCliente": "58945612345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Piaui",
-                    "cpnjCliente": "58945612345678",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "58945612345678"
-                }
-            ]
-        },   
-        {
-            "cnpj": "68945612345678",
-            "nome": "Luisa",
-            "sobrenome": "Katarina",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "Luisa@gmail.com",
-                    "cnpjCliente": "68945612345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Piaui",
-                    "cpnjCliente": "68945612345678",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "68945612345678"
-                }
-            ]
-        },   
-        {
-            "cnpj": "75445612345678",
-            "nome": "Joana",
-            "sobrenome": "Katarina",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "joana@gmail.com",
-                    "cnpjCliente": "75445612345678"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Piaui",
-                    "cpnjCliente": "75445612345678",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "75445612345678"
-                }
-            ]
-        },   
-        {
-            "cnpj": "78945612398778",
-            "nome": "Paula",
-            "sobrenome": "Katarina",
-            "flagStatusAtivo": true,
-            "emails": [
-                {
-                    "id": 0,
-                    "enderecoEmail": "Paula@gmail.com",
-                    "cnpjCliente": "78945612398778"
-                }
-            ],
-            "enderecos": [
-                {
-                    "id": 0,
-                    "cep": "72809800",
-                    "logradouro": "Rio Grande do Norte",
-                    "cpnjCliente": "78945612398778",
-                    "complemento": "Juazeiro",
-                    "bairro": "Norte",
-                    "numero": "10"
-                }
-            ],
-            "telefones": [
-                {
-                    "id": 0,
-                    "ddd": "61",
-                    "numero": "940028922",
-                    "cnpjCliente": "78945612398778"
-                }
-            ]
-        }   
-       
-]
+      }
+  ]

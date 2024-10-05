@@ -21,6 +21,17 @@
     - CurrentPage: Pagina desejada
 - Ex.: http://localhost:5052/Cliente/PageSize=10&CurrentPage=1
 
+> GET Paginado e status
+```
+    http://localhost:5052/Cliente/$PageSize={PageSize}&CurrentPage={CurrentPage}&IsAtivo={IsAtivo}
+```
+- Retorna os clientes persistidos, de forma paginada.
+- Parametros:
+    - PageSize: Quantidade de clientes;
+    - CurrentPage: Pagina desejada;
+    - IsAtivo: true/false
+- Ex.: http://localhost:5052/Cliente/PageSize=10&CurrentPage=1&IsAtivo=false
+
 > GET Unitario
 ```
     http://localhost:5052/Cliente/{CNPJ}

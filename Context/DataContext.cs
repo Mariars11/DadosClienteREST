@@ -26,9 +26,12 @@ public partial class DataContext : DbContext
     {
         modelBuilder.Entity<Cliente>(entity =>
         {
-            entity.HasKey(e => e.CNPJ);
+            entity.HasKey(e => new { e.ID });
 
             entity.ToTable("CLIENTE");
+            entity.Property(e => e.ID)
+                    .HasColumnName("ID")
+                    .ValueGeneratedOnAdd();
 
             entity.Property(e => e.CNPJ)
                 .HasMaxLength(14)
@@ -52,18 +55,16 @@ public partial class DataContext : DbContext
 
             entity.Property(e => e.Id).HasColumnName("ID").ValueGeneratedOnAdd();
 
-            entity.Property(e => e.CnpjCliente)
-                .HasMaxLength(14)
-                .IsUnicode(false)
-                .HasColumnName("CNPJ_CLIENTE");
+            entity.Property(e => e.IdCliente)
+                .HasColumnName("ID_CLIENTE");
             entity.Property(e => e.EnderecoEmail)
                 .HasMaxLength(120)
                 .IsUnicode(false)
                 .HasColumnName("ENDERECO_EMAIL");
 
             entity.HasOne(d => d.CnpjClienteNavigation).WithMany(p => p.Emails)
-                .HasForeignKey(d => d.CnpjCliente)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasForeignKey(d => d.IdCliente)
+                .OnDelete(DeleteBehavior.ClientCascade)
                 .HasConstraintName("FK_EMAIL_CLIENTE");
         });
 
@@ -92,10 +93,8 @@ public partial class DataContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("ESTADO");
-            entity.Property(e => e.CpnjCliente)
-                .HasMaxLength(14)
-                .IsUnicode(false)
-                .HasColumnName("CPNJ_CLIENTE");
+            entity.Property(e => e.IdCliente)
+                .HasColumnName("ID_CLIENTE");
             entity.Property(e => e.Logradouro)
                 .HasMaxLength(120)
                 .IsUnicode(false)
@@ -106,8 +105,8 @@ public partial class DataContext : DbContext
                 .HasColumnName("NUMERO");
 
             entity.HasOne(d => d.CpnjClienteNavigation).WithMany(p => p.Enderecos)
-                .HasForeignKey(d => d.CpnjCliente)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasForeignKey(d => d.IdCliente)
+                .OnDelete(DeleteBehavior.ClientCascade)
                 .HasConstraintName("FK_ENDERECO_CLIENTE");
         });
 
@@ -116,10 +115,8 @@ public partial class DataContext : DbContext
             entity.ToTable("TELEFONE");
 
             entity.Property(e => e.Id).HasColumnName("ID").ValueGeneratedOnAdd();
-            entity.Property(e => e.CnpjCliente)
-                .HasMaxLength(14)
-                .IsUnicode(false)
-                .HasColumnName("CNPJ_CLIENTE");
+            entity.Property(e => e.IdCliente)
+                .HasColumnName("ID_CLIENTE");
             entity.Property(e => e.Ddd)
                 .HasMaxLength(2)
                 .IsUnicode(false)
@@ -134,8 +131,8 @@ public partial class DataContext : DbContext
                 .HasColumnName("NUMERO");
 
             entity.HasOne(d => d.CnpjClienteNavigation).WithMany(p => p.Telefones)
-                .HasForeignKey(d => d.CnpjCliente)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasForeignKey(d => d.IdCliente)
+                .OnDelete(DeleteBehavior.ClientCascade)
                 .HasConstraintName("FK_TELEFONE_CLIENTE");
         });
 
