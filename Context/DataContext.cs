@@ -22,6 +22,7 @@ public partial class DataContext : DbContext
     public virtual DbSet<Endereco> Enderecos { get; set; }
 
     public virtual DbSet<Telefone> Telefones { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Cliente>(entity =>

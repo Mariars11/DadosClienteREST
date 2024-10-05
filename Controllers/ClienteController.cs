@@ -16,10 +16,11 @@ public class ClienteController : ControllerBase
     }
     private DataContext _context;
     /// <summary>
-    /// Listar clientes de forma paginada
+        /// Listar clientes de forma paginada
     /// </summary>
     ///<param name="PageSize" example="10"></param>
     ///<param name="CurrentPage" example="1"></param>
+
     [HttpGet("PageSize={PageSize}&CurrentPage={CurrentPage}")]
     public IEnumerable<Cliente> GetClientes(int PageSize, int CurrentPage){
         Console.WriteLine(String.Format("Tamanho da pagina: {0}; Pagina atual: {1}", PageSize, CurrentPage));
@@ -29,13 +30,15 @@ public class ClienteController : ControllerBase
                         .Include(n => n.Emails)
                         .Skip((CurrentPage - 1) * PageSize).Take(PageSize);
     }
+
     /// <summary>
-    /// Listar clientes com base no status e paginação
+        /// Listar clientes com base no status e paginação
     /// </summary>
+    
     ///<param name="PageSize" example="10"></param>
     ///<param name="CurrentPage" example="1"></param>
     ///<param name="IsAtivo" example="true"></param>
-    ///
+
     [HttpGet("$PageSize={PageSize}&CurrentPage={CurrentPage}&IsAtivo={IsAtivo}")]
     public IEnumerable<Cliente> GetClientesAtividade(int PageSize, int CurrentPage, bool IsAtivo){
         return _context.Clientes
@@ -45,22 +48,29 @@ public class ClienteController : ControllerBase
                         .Skip((CurrentPage - 1) * PageSize).Take(PageSize)
                         .Where(n => n.FlagStatusAtivo == IsAtivo);
     }
+
     /// <summary>
-    /// Retorna um cliente especifico
+        /// Retorna um cliente especifico
     /// </summary>
+
     ///<param name="cpnj" example="12345678912345"></param>
     [HttpGet("{cpnj}")]
-    public Cliente GetCliente(string cpnj){
-        return _context.Clientes
-                        .Include(n => n.Telefones)
-                        .Include(n => n.Enderecos)
-                        .Include(n => n.Emails)
-                        .First(n => n.CNPJ == cpnj);
+    public async Task<ActionResult<Cliente>> GetCliente(string cpnj){
+            var cliente = _context.Clientes
+                            .Include(n => n.Telefones)
+                            .Include(n => n.Enderecos)
+                            .Include(n => n.Emails)
+                            .FirstOrDefault(n => n.CNPJ == cpnj);
+            if(cliente == null){
+                return NotFound();
+            }
+            else{
+                return Ok(cliente);
+            }
     }
 /// <summary>
-/// Cria um ou vários clientes
+    /// Cria um ou vários clientes
 /// </summary>
-/// <returns>Um novo cliente</returns>
 /// <remarks>
 /// Sample request:
 ///
@@ -211,11 +221,23 @@ public class ClienteController : ControllerBase
     /// <summary>
     /// Deleta todos os clientes registrados
     /// </summary>
-    
+    /// <response code="200">Todos clientes excluídos</response>
+    /// <response code="400">Erro ao excluir clientes</response>
      [HttpDelete("")]
-    public void DeleteAllClientes(){
+    public async Task<IActionResult> DeleteAllClientes(){
         List<Cliente> clienteDeletar = _context.Clientes.ToList();
-        _context.Clientes.RemoveRange(clienteDeletar);
-        _context.SaveChanges();
+
+        try
+        {
+            _context.Clientes.RemoveRange(clienteDeletar);
+            _context.SaveChanges();
+
+            return Ok("Clientes excluídos com sucesso!");
+
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 }
