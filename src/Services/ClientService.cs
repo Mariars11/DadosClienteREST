@@ -7,11 +7,13 @@ public class ClientService : IClientService
 {
     private readonly ILogger<ClientService> _logger;
     private readonly DataContext _context;
+    private readonly IViaCepService _viaCepService;
 
-    public ClientService(ILogger<ClientService> logger, DataContext context)
+    public ClientService(ILogger<ClientService> logger, DataContext context, IViaCepService viaCepService)
     {
         _logger = logger;
         _context = context;
+        _viaCepService = viaCepService;
     }
     public IEnumerable<Cliente> GetClientes(int PageSize, int CurrentPage){
             return _context.Clientes
@@ -41,6 +43,7 @@ public class ClientService : IClientService
         string responseCode = string.Empty;
         foreach (var cliente in clientes)
         {
+            _viaCepService.GetEnderecoViaCep(cliente.Enderecos.First().Cep);
             var findClient = _context.Clientes.Where(n => n.CNPJ == cliente.CNPJ);
             if(!findClient.Any()){
                 _context.Clientes.Add(cliente);
