@@ -52,7 +52,7 @@
     http://localhost:5052/Endereco/{cep}
 ```
 
-- Retorna um endereço com base no cep
+- Retorna um endereço com base no cep através da api viacep 
 - Parametros:
     - CEP
 - Ex.: http://localhost:5052/Endereco/94470410
@@ -98,7 +98,6 @@
     - ID
     - CNPJ (string, 14 digitos)
     - Nome cliente (string)
-    - Sobrenome cliente (string)
     - Status (bool, ativo/inativo)
 
 - Email
@@ -123,6 +122,8 @@
     - Estado
     - Numero
     - ID_Cliente (relacionamento com cliente)
+
+
 
 
 
