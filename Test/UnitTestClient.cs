@@ -42,7 +42,36 @@ namespace TestClient
                     Telefones = new List<Telefone>{
                         new Telefone {
                             Celular = "983962396",
-                            TelefoneFixo = "29348255"
+                            TelefoneFixo = "29348255",
+                            Ddd = "61"
+                        }
+                    }
+                },
+                new Cliente{
+                    Nome = "Vanessa",
+                    CNPJ = "31949769747789",
+                    Sobrenome = "Clara Francisca Drumond",
+                    FlagStatusAtivo = true,
+                    Emails = new List<Email>{
+                        new Email {
+                            EnderecoEmail = "vanessa_drumond@zian.com.br"
+                        }
+                    },
+                    Enderecos = new List<Endereco>{
+                        new Endereco {
+                            Cep = "94470410",
+                            Logradouro = "Rua Principal",
+                            Numero = "221",
+                            Bairro = "Centro",
+                            Cidade = "Santa Elvira",
+                            Estado = "MT"
+                        }
+                    },
+                    Telefones = new List<Telefone>{
+                        new Telefone {
+                            Celular = "983962396",
+                            TelefoneFixo = "29348255",
+                            Ddd = "66"
                         }
                     }
                 }
@@ -50,6 +79,54 @@ namespace TestClient
             
             return clientes;
         }
+        /// <summary>
+        /// Testa a adição de um cliente sucesso
+        /// </summary>
+        [Fact]
+        public void AddCliente_Cliente()
+        {
+            //arrange
+            string response = "Cliente(s) criados";
+            var clientList = GetClientesData();
+            clientServices.Setup(x => x.CreateCliente(clientList))
+                .Returns(response);
+            var clientController = new ClienteController(clientServices.Object);
+            //act
+            var clientResult = clientController.CreateCliente(clientList).Result;
+            var resultType = clientResult as OkObjectResult;
+            
+            Console.WriteLine(clientResult);
+            //assert
+            Assert.NotNull(clientResult);
+
+            Assert.Equal(response, resultType.Value.ToString());
+        }
+         /// <summary>
+        /// Testa a adição de um cliente erro
+        /// </summary>
+        [Fact]
+        public void AddClienteJaExistente_Cliente()
+        {
+            string cnpj = "12345678912345";
+            //arrange
+            string response = String.Format("Bad request 400 - O CNPJ {0} já existe na base de dados", cnpj);
+            var clientList = GetClientesData();
+            clientServices.Setup(x => x.CreateCliente(clientList))
+                .Returns(response);
+            var clientController = new ClienteController(clientServices.Object);
+            //act
+            var clientResult = clientController.CreateCliente(clientList).Result;
+            var resultType = clientResult as BadRequestObjectResult;
+            
+            Console.WriteLine(clientResult);
+            //assert
+            Assert.NotNull(clientResult);
+
+            Assert.Equal(response, resultType.Value.ToString());
+        }
+        /// <summary>
+        /// Testa o get dos clientes com paginação
+        /// </summary>
         [Fact]
         public void GetClientesList_Clientes()
         {
@@ -61,14 +138,16 @@ namespace TestClient
                 .Returns(clientList);
             var clientController = new ClienteController(clientServices.Object);
             //act
-            var clientsResult = clientController.GetClientes(PageSize, CurrentPage);;
+            var clientsResult = clientController.GetClientes(PageSize, CurrentPage);
             //assert
             Assert.NotNull(clientsResult);
             Assert.Equal(GetClientesData().Count(), clientsResult.Count());
             Assert.Equal(GetClientesData().ToString(), clientsResult.ToString());
             Assert.True(clientList.Equals(clientsResult));
         }
-
+         /// <summary>
+        /// Testa o get de um cliente especifico
+        /// </summary>
         [Fact]
         public void GetClientByCNPJ_Cliente()
         {
@@ -79,26 +158,86 @@ namespace TestClient
                 .Returns(clientList[0]);
             var clientController = new ClienteController(clientServices.Object);
             //act
-            var clientResult = clientController.GetCliente(cnpj).Result.Value;
+            var result = clientController.GetCliente(cnpj).Result.Result;
+            var resultType = result as OkObjectResult;
+            var clientResult = (Cliente)resultType.Value;
+            
             //assert
             Assert.NotNull(clientResult);
             Assert.Equal(clientList[0].ID, clientResult.ID);
             Assert.True(clientList[0].ID == clientResult.ID);
         }
+         /// <summary>
+        /// Testa edição cliente sucesso
+        /// </summary>
+         [Fact]
+        public void UpdateClienteByID_Cliente()
+        {
+            Cliente cliente = new(){
+                    Nome = "Maria",
+                    CNPJ = "12345678912345",
+                    Sobrenome = "R Silva",
+                    FlagStatusAtivo = true,
+                    Emails = new List<Email>{
+                        new Email {
+                            EnderecoEmail = "mariaclara@gmail.com"
+                        }
+                    },
+                    Enderecos = new List<Endereco>{
+                        new Endereco {
+                            Cep = "94470410",
+                            Logradouro = "Travessa Inácio de Fraga",
+                            Numero = "810",
+                            Bairro = "Viamópolis",
+                            Cidade = "Viamão",
+                            Estado = "RS"
+                        }
+                    },
+                    Telefones = new List<Telefone>{
+                        new Telefone {
+                            Celular = "983962396",
+                            TelefoneFixo = "29348255",
+                            Ddd = "61"
+                        }
+                    }
+                };
+            //arrange
+            int id = 1;
+            string response = String.Format("Cliente com CPNJ: {0} e ID: {1} atualizado com sucesso!", cliente.CNPJ, id.ToString());
+            var clientList = GetClientesData();
+            clientServices.Setup(x => x.UpdateCliente(id, cliente))
+                .Returns(response);
+            var clientController = new ClienteController(clientServices.Object);
+            //act
+            var clientResult = clientController.UpdateCliente(id, cliente).Result;
+            var resultType = clientResult as OkObjectResult;
+            
+            //assert
+            Assert.NotNull(clientResult);
 
-        [Fact]
-        public void AddCliente_Cliente()
+            Assert.Equal(response, resultType.Value.ToString());
+        }
+        /// <summary>
+        /// Testa exclusão de um cliente
+        /// </summary>
+         [Fact]
+        public void DeleteClienteByCNPJ_Cliente()
         {
             //arrange
-            string response = "OK 200";
+            string cpnj = "31949769747789";
+            string response = "Cliente excluído com sucesso!";
             var clientList = GetClientesData();
-            clientServices.Setup(x => x.CreateCliente(clientList))
+            clientServices.Setup(x => x.DeleteCliente(cpnj))
                 .Returns(response);
-            var productController = new ClienteController(clientServices.Object);
+            var clientController = new ClienteController(clientServices.Object);
             //act
-            var productResult = productController.CreateCliente(clientList);
+            var clientResult = clientController.DeleteCliente(cpnj).Result;
+            var resultType = clientResult as OkObjectResult;
+            
             //assert
-            Assert.NotNull(productResult);
+            Assert.NotNull(clientResult);
+
+            Assert.Equal(response, resultType.Value.ToString());
         }
     }
 }
