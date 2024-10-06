@@ -48,12 +48,6 @@ namespace Apsen.Migrations
                         .HasColumnType("varchar(50)")
                         .HasColumnName("NOME");
 
-                    b.Property<string>("Sobrenome")
-                        .IsRequired()
-                        .HasMaxLength(120)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(120)")
-                        .HasColumnName("SOBRENOME");
 
                     b.HasKey("ID");
 

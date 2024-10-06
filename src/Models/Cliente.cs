@@ -14,9 +14,6 @@ public partial class Cliente
     [Required(ErrorMessage = "Informe o nome!")]
     [MinLength(2, ErrorMessage = "Nome inválido")]
     public string Nome { get; set; } = null!;
-    [Required(ErrorMessage = "Informe o sobrenome!")]
-    [MinLength(2, ErrorMessage = "Sobrenome inválido")]
-    public string Sobrenome { get; set; } = null!;
     [Required(ErrorMessage = "Informe um status!")]
     public bool FlagStatusAtivo { get; set; }
 

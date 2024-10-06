@@ -18,7 +18,6 @@ namespace Apsen.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CNPJ = table.Column<string>(type: "varchar(14)", unicode: false, maxLength: 14, nullable: false),
                     NOME = table.Column<string>(type: "varchar(50)", unicode: false, maxLength: 50, nullable: false),
-                    SOBRENOME = table.Column<string>(type: "varchar(120)", unicode: false, maxLength: 120, nullable: false),
                     FLAG_STATUS_ATIVO = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

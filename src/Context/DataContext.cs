@@ -45,10 +45,6 @@ public partial class DataContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("NOME");
-            entity.Property(e => e.Sobrenome)
-                .HasMaxLength(120)
-                .IsUnicode(false)
-                .HasColumnName("SOBRENOME");
         });
 
         modelBuilder.Entity<Email>(entity =>

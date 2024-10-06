@@ -65,7 +65,6 @@ public class ClienteController : ControllerBase
 ///         {
 ///             "cnpj": "12345678912345",
 ///             "nome": "Maria Clara",
-///             "sobrenome": "Silva",
 ///             "flagStatusAtivo": true,
 ///             "emails": [
 ///                 {
@@ -126,7 +125,6 @@ public class ClienteController : ControllerBase
 ///             "id": "1",
 ///             "cnpj": "12345678912345",
 ///             "nome": "Maria Clara",
-///             "sobrenome": "R Silva",
 ///             "flagStatusAtivo": true,
 ///             "emails": [
 ///                 {
