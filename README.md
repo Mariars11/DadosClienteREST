@@ -3,11 +3,14 @@
 # Rodar projeto
 - <b style="color:red">Necessário sdk .net 8 </b> <br>
 > git clone https://github.com/Mariars11/DadosClienteREST <br>
+## Rodar api
+> cd ./src <br>
 > dotnet restore <br>
 > dotnet build <br>
 > dotnet watch run <br>
+## Rodar teste
+> cd ../test <br>
 > dotnet test <br>
-> dotnet clean (exclue bin e obj para rodar o teste)
 
 # Utilização da API
 
