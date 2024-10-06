@@ -15,13 +15,15 @@ public class ViaCepService : IViaCepService
         
         var clientGet = await client.GetAsync(urlViaCep);
         var contentGet = await clientGet.Content.ReadAsStringAsync();
+        Console.WriteLine(contentGet);
         var jsonToken = JObject.Parse(contentGet);
         Endereco endereco = new(){
             Cep = cep,
             Logradouro = jsonToken.Value<string>("logradouro"),
             Complemento = jsonToken.Value<string>("complemento"),
             Bairro = jsonToken.Value<string>("bairro"),
-            Estado = jsonToken.Value<string>("estado")
+            Estado = jsonToken.Value<string>("estado"),
+            Cidade = jsonToken.Value<string>("localidade"),
         };
 
         return endereco;

@@ -214,4 +214,13 @@ public class ClienteController : ControllerBase
         }
         return Ok(response);
     }
+    /// <summary>
+        /// Retorna o endereço com base no cep
+    /// </summary>
+    
+    ///<param name="cep" example="94470410"></param>
+    [HttpGet("/Endereco/{cep}")]
+    public Endereco GetEndereco(string cep){
+        return _clienteService.BuscarEndereco(cep);
+    }
 }

@@ -6,4 +6,4 @@
 *.txt
 *.github
 .vs
-.sln
+*.sln

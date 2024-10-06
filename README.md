@@ -46,6 +46,16 @@
     - CNPJ: cnpj do cliente;
 - Ex.: http://localhost:5052/Cliente/12345678912345
 
+> GET Endereço
+
+```
+    http://localhost:5052/Endereco/{cep}
+```
+
+- Retorna um endereço com base no cep
+- Parametros:
+    - CEP
+- Ex.: http://localhost:5052/Endereco/94470410
 ## POST
 > Criação
 ```

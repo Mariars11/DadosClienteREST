@@ -11,5 +11,7 @@ public interface IClientService
     public string UpdateCliente(int ID, Cliente cliente);
     public string DeleteCliente(string cnpj);
     public string DeleteAllClientes();
+    public Endereco BuscarEndereco(string cep);
+
     
 }

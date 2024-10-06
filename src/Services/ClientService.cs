@@ -43,7 +43,6 @@ public class ClientService : IClientService
         string responseCode = string.Empty;
         foreach (var cliente in clientes)
         {
-            _viaCepService.GetEnderecoViaCep(cliente.Enderecos.First().Cep);
             var findClient = _context.Clientes.Where(n => n.CNPJ == cliente.CNPJ);
             if(!findClient.Any()){
                 _context.Clientes.Add(cliente);
@@ -113,5 +112,11 @@ public class ClientService : IClientService
         }
 
         return responseCode;
+    }
+
+    public Endereco BuscarEndereco(string cep){
+        var endereco = _viaCepService.GetEnderecoViaCep(cep).Result;
+
+        return endereco;
     }
 }
