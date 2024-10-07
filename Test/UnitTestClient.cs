@@ -22,7 +22,6 @@ namespace TestClient
                 new Cliente{
                     Nome = "Maria Clara",
                     CNPJ = "12345678912345",
-                    Sobrenome = "Silva",
                     FlagStatusAtivo = true,
                     Emails = new List<Email>{
                         new Email {
@@ -50,7 +49,6 @@ namespace TestClient
                 new Cliente{
                     Nome = "Vanessa",
                     CNPJ = "31949769747789",
-                    Sobrenome = "Clara Francisca Drumond",
                     FlagStatusAtivo = true,
                     Emails = new List<Email>{
                         new Email {
@@ -174,9 +172,8 @@ namespace TestClient
         public void UpdateClienteByID_Cliente()
         {
             Cliente cliente = new(){
-                    Nome = "Maria",
+                    Nome = "Maria R",
                     CNPJ = "12345678912345",
-                    Sobrenome = "R Silva",
                     FlagStatusAtivo = true,
                     Emails = new List<Email>{
                         new Email {

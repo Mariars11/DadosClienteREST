@@ -48,7 +48,7 @@ public class ClienteController : ControllerBase
     public async Task<ActionResult<Cliente>> GetCliente(string cpnj){
             var cliente = _clienteService.GetCliente(cpnj);
             if(cliente == null){
-                return NotFound();
+                return NotFound("Cliente não encontrado na base de dados!");
             }
             else{
                 return Ok(cliente);
